@@ -1,0 +1,87 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Laila:wght@600&family=Lemon&family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact-fr.css">
+    <title>mentions-legales/jb.company/ca</title>
+</head>
+<body>
+    <header>
+        <div class="logo"> <!-- Logo à gauche -->
+            <button id="retourButton"><i class="fas fa-chevron-left fa-2x"></i> Retour</button>             
+        </div>
+        <script>
+            document.getElementById("retourButton").addEventListener("click", function() {
+                // Utilisez window.history pour revenir à la page précédente
+                window.history.back();
+            });
+        </script>   
+        <div class="header-title"> <!-- Titre centré verticalement -->
+            <h2>Transformons vos rêves en réalité numérique</h2>   
+        </div> 
+        <nav class="navbar"> <!-- Barre de navigation à droite -->
+                <ul>
+                    <li><a href="accueil-fr.html">Accueil</a></li>
+                    <li><a href="service-fr.html">Services</a></li>
+                    <li><a href="a-propos-fr.html">À Propos</a></li>
+                </ul>
+        </nav>           
+    </header>
+    <div class="container">
+        <div class="element1" style="width: 45%;">
+            <form action="traitement-du-formulaire.php" method="post">
+                <label for="nom" >Nom complet :</label>
+                <input type="text" id="nom" name="nom" class="nom" required>
+            
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" class="nom-1" required>
+            
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" class="nom-2" required>
+            
+                <label for="contact-preference" >Par quoi préférez-vous être contacté(e) ?</label>
+                <select id="contact-preference" name="contact-preference" class="cont">
+                    <option value="option">Choisir une des options suivantes</option>
+                    <option value="direct">Par appel direct</option>
+                    <option value="vidéoconférence">Par vidéoconférence</option>
+                    <option value="poste">Par la poste</option>
+                    <option value="texto">Par texto</option>
+                    <option value="email">Par e-mail</option>
+                </select>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required class="mess"></textarea>
+            
+                <input type="submit" value="Envoyer" class="envo">
+            </form>            
+        </div>
+        <div class="element2" style="width: 300px;">
+            <p><strong>Téléphone :</strong> +1 (581) 578-4630</p>
+            <p><strong>Email :</strong> <a href="mailto:votre@email.com"> jeanbaptisteetcompany.ca@gmail.com</a></p>
+            <div class="social-icons">
+                <a href="https://whatsapp.com/dl/"><li class="what"><i class="fab fa-whatsapp" title="Whatsapp"></i></li></a>
+                <a href="https://www.facebook.com"><li class="face"><i class="fab fa-facebook" title="Facebook"></i></li></a>
+                <a href="#"><li class="inst"><i class="fab fa-instagram" title="Instagram"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCiY-KC_pne260mTsiKVUXNQ"><li class="yout"><i class="fab fa-youtube" title="Youtube"></i></li></a>
+                <a href="https://twitter.com/JBet_company_ca"><li class="twit"><i class="fab fa-twitter" title="Twitter"></i></li></a>
+                <a href="https://www.tiktok.com/@jbet_company.ca?is_from_webapp=1&sender_device=pc"><li class="tikt"><i class="fab fa-tiktok" title="Tiktok"></i></li></a>
+            </div>            
+        </div>
+    </div>    
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jean Baptiste & Company.Ca. Tous droits réservés.</p>
+          <ul>
+            <li><a href="MentionsL-FR.html">Mentions Légales</a></li>
+            <li><a href="politiquec-FR.html">Politique de Confidentialité</a></li>
+            <li><a href="plans-fr.html">Plan du Site</a></li>
+          </ul>
+        </div>
+      </footer> 
+      <script src="contact-fr..js"></script>        
+</body>
+</html>

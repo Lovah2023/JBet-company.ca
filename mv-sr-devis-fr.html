@@ -1,0 +1,540 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Laila:wght@600&family=Lemon&family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="devis-fr.css">
+    <title>demander.undevis/jb.company/ca</title>
+</head>
+<body>
+    <header>
+        <div class="logo"--> <!-- Logo à gauche -->
+            <button id="retourButton"><i class="fas fa-chevron-left fa-2x"></i> Retour</button>             
+        </div>   
+        <div class="header-title"> <!-- Titre centré verticalement -->
+            <h2>Transformons vos rêves en réalité numérique</h2>   
+        </div> 
+        <nav class="navbar"> <!-- Barre de navigation à droite -->
+                <ul>
+                    <li><a href="accueil-fr.html">Accueil</a></li>
+                    <li><a href="service-fr.html">Services</a></li>
+                    <li><a href="a-propos-fr.html">À Propos</a></li>
+                    <li><a href="contact-fr.html">Contact</a></li>
+                </ul>
+        </nav>           
+    </header>
+    <main>
+        <div class="formu">
+            <h1>Demande de devis</h1>
+            <form action="traitement.php" method="post">
+                <label>
+                    <input type="radio" name="demande_pour" value="montage_video" id="services_vip1" required> Montage vidéo
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="Services_Redaction" id="services_vip2" required> Services de Rédaction
+                </label>
+                <div id="infos_vip1">
+                    <h2>Type de Vidéo :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vprom">Montage de vidéos promotionnelles
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_ven">Montage de vidéos d'entreprise
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vpu">Montage de vidéos publicitaires
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vprod">Montage de vidéos de produits
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vma">Montage de vidéos de mariage
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vvo">Montage de vidéos de voyage
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_vvl">Montage de vidéos de vlog
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Style de Montage :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_rapide_dynamique">Montage rapide et dynamique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_narra">Montage narratif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_crea">Montage créatif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="montage_cine">Montage cinématographique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Musique et Son :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="ajout_music_fond">Ajout de musique de fond
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="enregistrement_vocal/narration">Enregistrement vocal/narration
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="effects_sonores">Effets sonores
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Format de Vidéo Final :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="full">Full HD (1080p)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="ultra">Ultra HD (4K)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Format de Fichiers Sources :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="fourniture_video_brute">Fourniture de vidéos brutes
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="fourniture_fichiers_medias">Fourniture de fichiers de médias (images, clips)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Effets Visuels :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="animation_graphique">Animation graphique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="effects_transition">Effets de transition
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="effects_speciaux">Effets spéciaux
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="incrustation_img">Incrustation d'images
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                <h2>Services Complémentaires :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="creation_contenue_v">Création de contenu vidéo
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="enregistrement_v">Enregistrement vidéo
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="post-production_audio">Post-production audio
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="etalonage_couleurs">Étalonnage des couleurs
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="livraison_differents_formats">Livraison dans différents formats
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                </div>
+    
+                <div id="infos_vip2">
+                    <h2>Type de Contenu :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="articles_blog">Articles de blog
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="contenue_web">Contenu web
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="articles_press">Articles de presse
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="contenue_marketing">Contenu marketing
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="contenue_technique">Contenu technique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="rapports">Rapports
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="discours">Discours
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2> Objectif du Contenu :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="informer">Informer
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="eduquer">Éduquer
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="convaincre">Convaincre
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="divertir">Divertir
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="promouvoir">Promouvoir
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Style de Rédaction :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="formel">Formel
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="informel">Informel
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="tech">Technique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="narratif">Narratif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="crea">Créatif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Fréquence de Publication :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="ponctuelle">Ponctuelle
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="hebdomadaire">Hebdomadaire
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="mensuelle">Mensuelle
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Optimisation pour les Moteurs de Recherche (SEO) :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="optimisation_mots-cles">Optimisation des mots-clés
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="optimisation_balises_metadonnees">Optimisation des balises et des métadonnées
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Services Complémentaires :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="relecture_correction">Relecture et correction
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="recherche_sujets">Recherche de sujets
+                            </label> 
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="redaction_seo">Rédaction SEO
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="traduction">Traduction
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision">Révision
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                </div>
+                <h2>Je demande pour :</h2>
+                <label>
+                    <input type="radio" name="demande_pour" value="moi" id="demande_moi" required> Moi
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="entreprise" id="demande_entreprise" required> Mon entreprise
+                </label>
+    
+                <div id="infos_personnelles">
+                    <h2>Informations personnelles :</h2>
+                    <label for="nom">Votre nom complet :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+    
+                <div id="infos_entreprise">
+                    <h2>Informations sur l'entreprise :</h2>
+                    <label for="nom_legal">Nom légal de l'entreprise :</label>
+                    <input type="text" id="nom_legal" name="nom_legal" required>
+                    <label for="nom_demandeur">Nom du demandeur</label>
+                    <input type="text" id="nom_demandeur" name="nom_demandeur" required>
+                    <label for="role">Rôle dans l'entreprise</label>
+                    <input type="text" id="role_demandeur" name="role_demandeur" required>
+                </div>
+                <label for="number_phone">Numéro de téléphone:</label>
+                <input type="text" id="nom" name="nom" required>
+    
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required>
+    
+                <label for="message">Veuillez nous parlez un peu plus de votre projet :</label>
+                <textarea class="projet" id="message" name="message" rows="4" required></textarea>
+                <h2>Termes et Conditions d'envoie de demande</h2>
+                <label>
+                    <input type="checkbox" name="accept_terms" required>
+                    J'accepte les <a href="tced-fr.html" target="_blank">Termes et Conditions d'envoie de demande</a>
+                </label>
+    
+                <button type="submit" class="but">Envoyer</button>
+            </form>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()" title="Revenir en haut de la page">&#9650;</button>    
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Nous Contacter</h3>
+            <p><i class="fas fa-envelope"></i> jeanbaptisteetcompany.ca@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +1 (581) 578-4630</p>
+          </div>
+          <div  class="footer-center">
+            <h3>Liens Utiles</h3>
+            <ul>
+              <li><a href="accueil-fr.html">Accueil</a></li>
+              <li><a href="service-fr.html">Services</a></li>
+              <li><a href="contact-fr.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jean Baptiste & Company.Ca. Tous droits réservés.</p>
+          <ul>
+            <li><a href="MentionsL-FR.html">Mentions Légales</a></li>
+            <li><a href="politiquec-FR.html">Politique de Confidentialité</a></li>
+            <li><a href="plans-fr.html">Plan du Site</a></li>
+          </ul>
+        </div>
+      </footer-->         
+    <script src="devis-fr.js"></script>
+</body>
+</html>

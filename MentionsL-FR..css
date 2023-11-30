@@ -1,0 +1,196 @@
+body {
+  background-color: white;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  /* Autres styles */
+}
+
+a {
+  color: cyan; /* Couleur des liens */
+  text-decoration: none; /* Supprimer le soulignement des liens */
+}
+/* Styles pour le header */
+header {
+  display: flex;
+  justify-content: space-between; /* Place les éléments à chaque extrémité */
+  align-items: center; /* Centre verticalement les éléments */
+  color: white;
+  background-color: black;
+  position: absolute;
+  width: 98.9%;
+}
+
+/* Styles pour le logo */
+.logo button {
+  max-width: 150px; /* Ajustez la largeur du logo selon vos besoins */
+  margin-left: 30px;
+  background: transparent;
+  justify-content: center;
+  text-align: center;
+  color: orange;
+}
+
+/* Styles pour la barre de navigation */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 30px; /* Marge entre les éléments de la barre de navigation */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Supprime la marge du dernier élément */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: 'Laila', sans-serif;
+}
+nav a:hover {
+  color: orange;
+}
+
+/* Le reste de vos styles pour le contenu de la page */
+
+.header-title {
+  text-align: center; /* Centre le texte horizontalement */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  size: 12px;
+}  
+main {
+  background: url(bbbbb.png);
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+}  
+  .mentions {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: inherit;
+    padding: 20px 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: rgb(39, 39, 39);
+    text-decoration: none;
+    flex-direction: column;
+  }  
+  .mentions-legales {
+    text-align: left; /* Centre le texte horizontalement */
+    justify-content: center;
+    background-color: rgb(139, 115, 70);
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 20px;
+    padding: 5px 5px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }  
+  .mentions h1 {
+    color: orange;
+    font-family: 'Laila', sans-serif;
+  }  
+  .mentions-legales h3 {
+    font-family: 'Laila', sans-serif;
+    color: white;
+  }  
+  .mentions-legales p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+  }  
+  .mentions-legales a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3094ff;
+    margin: 5px;
+  } 
+  .mentions-legales a:hover {
+    color: #ff9900;
+    opacity: 0.7;
+  }  
+  footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 0; /* Espacement interne */
+  }
+  
+  /* Style du container du footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Style des éléments du footer (gauche, centre, droite) */
+  .footer-left, .footer-center {
+    flex: 1;
+    margin: 10px;
+  }
+  .footer-left, .footer-center h3 {
+    color: orange;
+    font-family: 'Palanquin Dark', sans-serif;
+  }
+  .footer-left p {
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+  }
+  .footer-left p:hover {
+    color: #007bff;
+  }
+  
+  /* Style des liens de navigation dans le footer */
+  .footer-center ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-center ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-center a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Laila', sans-serif;
+  }
+  
+  .footer-center a:hover {
+    color: #ff9900; /* Couleur au survol */
+  }
+  /* Style du bas du footer (copyright et liens légaux) */
+  .footer-bottom {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+    font-family: 'Laila', sans-serif;
+  }
+  
+  .footer-bottom p, .footer-bottom ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-bottom a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+    color: white;
+  }

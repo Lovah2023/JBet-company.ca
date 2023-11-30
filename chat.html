@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('auli.jpg');
+    background-size: 250lvh;
+}
+
+#chat-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.user-message {
+    text-align: right;
+    background-color: #e0e0e0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#user-input {
+    width: 70%;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+        /* Votre CSS pour la mise en page ici */
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat">
+        </div>
+        <div class="chat-header">
+            Chatbot
+            <button id="close-chat">Fermer</button>
+        </div>
+        <input type="text" id="user-input" placeholder="Tapez votre réponse ici...">
+        <button id="send-button">Envoyer</button>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        // Définissez votre série de questions et réponses ici
+        const conversation = [
+            { question: "Bonjour, j'espère que vous allez bien. comment puis-je vous aider. Avant tout, je veux que vous sachiez que je ne suis qu'un système de chat activé automatiquement avec des réponses préenregistrées. Pour des informations plus précises en fonction de ce que vous recherchez, Si vous avez des questions ou des préoccupations spécifiques, veuillez bien vouloir contacter un de nos expert qui vous répondra le plus rapidement possible. Voulez vous quand même continuer avec moi? Votre satisfaction est notre priorité, donc n'hésitez pas à me faire part de vos préférences.", answers: ["Oui", "Non"] },
+            { question: "Merci de nous faire part de votre avis sur cette proposition. Nous sommes là pour nous assurer que votre expérience avec nous soit la meilleure possible. Alors je vous dis à bientôt", answers: [], dependsOn: 0, condition: "Oui" },
+            { question: "Compris. Saviez vous déjà ce que vous recherchez?", answers: [], dependsOn: 0, condition: "Non"},
+            { question: "Quel genre de service cherchez vous?", answers: ["Développeur Web et Applications Mobiles", "Infographe et Graphiste Créatif", "Développeur de Jeux Vidéo", "Monteur Vidéo, Scénariste et Rédacteur Créatif"]},
+            { question: "Je suis ravi de vous présenter nos services de développement web et d'applications mobiles. En tant que développeur expérimenté, notre équipe se spécialise dans la création de sites web dynamiques et d'applications mobiles intuitives. Nous nous efforçons de traduire vos idées en solutions numériques innovantes, en mettant l'accent sur une expérience utilisateur exceptionnelle. De la conception à la mise en œuvre, nous travaillons en étroite collaboration avec vous pour garantir que chaque aspect de votre projet soit parfaitement adapté à vos besoins. Notre objectif est de donner vie à votre vision numérique de manière efficace, créative et fonctionnelle. N'hésitez pas à faire part de vos besoins spécifiques ou à poser des questions à un de nos experts en demandant un devis. Nous sommes là pour concrétiser vos projets digitaux.", answers: [], dependsOn: 3, condition: "Développeur Web et Applications Mobiles" },
+            { question: "Je suis ravi de vous présenter notre expertise en infographie et design créatif. En tant qu'infographe et graphiste créatif, notre mission est de transformer des idées en visuels percutants et mémorables. Nous sommes spécialisés dans la création d'éléments graphiques attrayants, que ce soit pour des supports imprimés ou numériques. Notre approche artistique et notre attention aux détails garantissent des créations uniques et professionnelles qui captivent l'audience. Nous sommes là pour donner une identité visuelle distinctive à votre projet, en harmonie avec vos valeurs et votre message. N'hésitez pas à partager vos besoins spécifiques avec un de nos experts en demandant un devis", answers: [], dependsOn: 3, condition: "Infographe et Graphiste Créatif" },
+            { question: "Nous sommes des développeurs passionnés de jeux vidéo, dédiés à créer des expériences ludiques captivantes. Notre expertise va de la conception créative à la programmation avancée, nous permettant de donner vie à des mondes interactifs uniques. Nous mettons l'accent sur l'innovation, l'esthétique immersive et le gameplay exceptionnel pour offrir des jeux qui captivent et divertissent. Si vous avez des idées de jeu ou des besoins spécifiques, nous sommes là pour les concrétiser. N'hésitez pas à nous contacter pour discuter de la façon dont nous pouvons transformer vos concepts en expériences de jeu exceptionnell", answers: [], dependsOn: 3, condition: "Développeur de Jeux Vidéo" },
+            { question: "En tant que monteur vidéo, scénariste et rédacteur créatif, je fusionne l'art de la narration visuelle avec une expertise dans l'édition vidéo pour créer des contenus captivants et percutants. Ma passion réside dans l'élaboration de scénarios ingénieux et la mise en œuvre de montages qui transcendent les attentes. Avec une attention méticuleuse aux détails et un sens aigu de la créativité, je m'efforce de donner vie à chaque histoire de manière mémorable. Que ce soit pour des vidéos promotionnelles, des documentaires ou des contenus narratifs, je suis déterminé à faire de votre vision une réalité visuelle inoubliable. N'hésitez pas à discuter de vos projets spécifiques ou à poser des questions. on est là pour donner vie à vos idée", answers: [], dependsOn: 3, condition: "Monteur Vidéo, Scénariste et Rédacteur Créatif" },
+            { question: "Merci d'avoir discuté avec nous!", answers: [], dependsOn: 3, condition: "Oui" },
+        ];
+
+        let currentQuestionIndex = 0;
+
+        // Fonction pour afficher une question dans le chat
+        function askQuestion(index) {
+            const question = conversation[index].question;
+            const answers = conversation[index].answers;
+            const message = document.createElement('div');
+            message.classList.add('message');
+            message.innerHTML = `<p>${question}</p>`;
+            chatContainer.appendChild(message);
+
+            // Si des réponses sont disponibles, ajoutez des boutons pour les choisir
+            if (answers.length > 0) {
+                answers.forEach(answer => {
+                    const button = document.createElement('button');
+                    button.textContent = answer;
+                    button.addEventListener('click', () => handleAnswer(answer));
+                    message.appendChild(button);
+                });
+            }
+
+            // Passez à la question suivante lorsque l'utilisateur appuie sur Enter
+            userInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    handleAnswer(userInput.value);
+                }
+            });
+        }
+
+        // Fonction pour gérer la réponse de l'utilisateur
+        function handleAnswer(answer) {
+            const currentQuestion = conversation[currentQuestionIndex];
+            const nextQuestionIndex = currentQuestionIndex + 1;
+
+            // Ajoutez la réponse de l'utilisateur à la conversation
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user-message');
+            userMessage.innerHTML = `<p>${answer}</p>`;
+            chatContainer.appendChild(userMessage);
+
+            // Si la réponse de l'utilisateur dépend de la question précédente
+            if (currentQuestion.dependsOn !== undefined && answer === currentQuestion.condition) {
+                currentQuestionIndex = nextQuestionIndex;
+            } else if (currentQuestionIndex < conversation.length - 1) {
+                currentQuestionIndex = nextQuestionIndex;
+            }
+
+            // Effacez la zone de texte de l'utilisateur
+            userInput.value = '';
+
+            // Affichez la prochaine question
+            if (currentQuestionIndex < conversation.length) {
+                askQuestion(currentQuestionIndex);
+            }
+        }
+
+        // Démarrez la conversation en affichant la première question
+        askQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

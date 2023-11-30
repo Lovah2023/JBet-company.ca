@@ -1,0 +1,581 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Laila:wght@600&family=Lemon&family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="devis-fr.css">
+    <title>demander.undevis/jb.company/ca</title>
+</head>
+<body>
+    <header>
+        <div class="logo"--> <!-- Logo à gauche -->
+            <button id="retourButton"><i class="fas fa-chevron-left fa-2x"></i> Retour</button>             
+        </div>   
+        <div class="header-title"> <!-- Titre centré verticalement -->
+            <h2>Transformons vos rêves en réalité numérique</h2>   
+        </div> 
+        <nav class="navbar"> <!-- Barre de navigation à droite -->
+                <ul>
+                    <li><a href="accueil-fr.html">Accueil</a></li>
+                    <li><a href="service-fr.html">Services</a></li>
+                    <li><a href="a-propos-fr.html">À Propos</a></li>
+                    <li><a href="contact-fr.html">Contact</a></li>
+                </ul>
+        </nav>           
+    </header>
+    <main>
+        <div class="formu">
+            <h1>Demande de devis</h1>
+            <form action="traitement.php" method="post">
+                <label>
+                    <input type="radio" name="demande_pour" value="Services_Scenarisation" id="services_vip1" required> Services de Scénarisation
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="" id="services_vip2" required> Services de Révision et de Correction
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="" id="services_vip3" required> Consultation et Conseil
+                </label>
+                <div id="infos_vip1">
+                    <h2>Type de Projet :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_f">Scénario de film
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_st">Scénario de série télévisée
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_p">Scénario de publicité
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_vp">Scénario de vidéo promotionnelle
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_jv">Scénario de jeu vidéo
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_cm">Scénario de court-métrage
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_d">Scénario de documentaire
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Genre :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="drame">Drame
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="comedie">Comédie
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="science_f">Science-fiction
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="horreur">Horreur
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="romance">Romance
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="action">Action
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="fantaisie">Fantaisie
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Style de Scénario :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_c">Scénario classique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_nl">Scénario non linéaire
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="scenario_i">Scénario interactif (pour les jeux vidéo)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Services Complémentaires :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_sc">Révision du scénario
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="adaptation_sc">Adaptation du scénario pour différents formats
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="consultation_developpe">Consultation en développement de projet
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                </div>
+    
+                <div id="infos_vip2">
+                    <h2>Type de Contenu :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="articles_blog">Articles de blog
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="contenue_web">Contenu web
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="rapports">Rapports
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="documents_acad">Documents académiques
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="manuels_livres">Manuscrits de livres
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="presentation">Présentations
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="courriels_professionnels">Courriels professionnels
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                    </ul>
+                    <h2>Niveau de Révision :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_g">Révision de base (correction de la grammaire, de l'orthographe, de la ponctuation)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_a">Révision approfondie (amélioration de la structure, de la clarté et de la cohérence)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_c">Révision de contenu (réorganisation et suggestion de contenu)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                    </ul>
+                    <h2>Style de Rédaction :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="Formel">Formel
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="Informel">Informel
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="tech">Technique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="narratif">Narratif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="crea">Créatif
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                    </ul>
+                    <h2>Format de Fichier :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="fo_fich">Format de fichier source (Word, PDF, etc.)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="fo_liv">Format de livraison souhaité (Word, PDF, etc.)
+                            </label>
+                        </li>
+                    </ul>
+                    <h2>Services Complémentaires :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="correction">Correction d'épreuves pour l'impression
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_contenue">Révision de contenu pour l'optimisation SEO
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="revision_correction">Révision et correction de contenu bilingue
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                </div>
+
+                <div id="infos_vip3">
+                    <h2>Domaine de Consultation :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="gestion_entreprise">Gestion d'entreprise
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="strategie_mark">Stratégie marketing
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="gestion_projet">Gestion de projet
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="rh">Ressources humaines
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="finance_compta">Finance et comptabilité
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="tech_information">Technologies de l'information
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="develeppe_person">Développement personnel
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Objectif de la Consultation :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="analyse_situation">Analyse de la situation actuelle
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="elaboration_plan">Élaboration d'un plan stratégique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="resolution_probleme">Résolution de problèmes spécifiques
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="developpe_competences">Développement de compétences
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="prise_decision">Prise de décision
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Mode de Consultation :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="en_personne">Consultation en personne
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="en_ligne">Consultation en ligne (vidéoconférence, téléphone)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="par_email">Consultation par e-mail
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="Par-chat">Consultation par chat
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Fréquence de Consultation :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="unique">Consultation unique
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="reguliere">Consultation régulière (par exemple, hebdomadaire, mensuelle)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                    <h2>Services Complémentaires :</h2>
+                    <ul class="options-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="rapport_apres_consulte">Rapport écrit après la consultation
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="suivi">Suivi et soutien continu
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="formation">Formation
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                            </label>
+                            <div id="autre">
+                                <input type="text" id="nom" name="nom">
+                            </div>
+                        </li>
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                    </ul>
+                </div>
+                <h2>Je demande pour :</h2>
+                <label>
+                    <input type="radio" name="demande_pour" value="moi" id="demande_moi" required> Moi
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="entreprise" id="demande_entreprise" required> Mon entreprise
+                </label>
+    
+                <div id="infos_personnelles">
+                    <h2>Informations personnelles :</h2>
+                    <label for="nom">Votre nom complet :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+    
+                <div id="infos_entreprise">
+                    <h2>Informations sur l'entreprise :</h2>
+                    <label for="nom_legal">Nom légal de l'entreprise :</label>
+                    <input type="text" id="nom_legal" name="nom_legal" required>
+                    <label for="nom_demandeur">Nom du demandeur</label>
+                    <input type="text" id="nom_demandeur" name="nom_demandeur" required>
+                    <label for="role">Rôle dans l'entreprise</label>
+                    <input type="text" id="role_demandeur" name="role_demandeur" required>
+                </div>
+                <label for="number_phone">Numéro de téléphone:</label>
+                <input type="text" id="nom" name="nom" required>
+    
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required>
+    
+                <label for="message">Veuillez nous parlez un peu plus de votre projet :</label>
+                <textarea class="projet" id="message" name="message" rows="4" required></textarea>
+                <h2>Termes et Conditions d'envoie de demande</h2>
+                <label>
+                    <input type="checkbox" name="accept_terms" required>
+                    J'accepte les <a href="tced-fr.html" target="_blank">Termes et Conditions d'envoie de demande</a>
+                </label>
+    
+                <a href="traitement.html"><button type="submit" class="but">Envoyer</button></a>
+            </form>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()" title="Revenir en haut de la page">&#9650;</button>    
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Nous Contacter</h3>
+            <p><i class="fas fa-envelope"></i> jeanbaptisteetcompany.ca@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +1 (581) 578-4630</p>
+          </div>
+          <div  class="footer-center">
+            <h3>Liens Utiles</h3>
+            <ul>
+              <li><a href="accueil-fr.html">Accueil</a></li>
+              <li><a href="service-fr.html">Services</a></li>
+              <li><a href="contact-fr.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jean Baptiste & Company.Ca. Tous droits réservés.</p>
+          <ul>
+            <li><a href="MentionsL-FR.html">Mentions Légales</a></li>
+            <li><a href="politiquec-FR.html">Politique de Confidentialité</a></li>
+            <li><a href="plans-fr.html">Plan du Site</a></li>
+          </ul>
+        </div>
+      </footer-->         
+    <script src="devis-fr.js"></script>
+</body>
+</html>

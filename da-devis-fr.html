@@ -1,0 +1,273 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Laila:wght@600&family=Lemon&family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="devis-fr.css">
+    <title>demander.undevis/jb.company/ca</title>
+</head>
+<body>
+    <header>
+        <div class="logo"--> <!-- Logo à gauche -->
+            <button id="retourButton"><i class="fas fa-chevron-left fa-2x"></i> Retour</button>             
+        </div>   
+        <div class="header-title"> <!-- Titre centré verticalement -->
+            <h2>Transformons vos rêves en réalité numérique</h2>   
+        </div> 
+        <nav class="navbar"> <!-- Barre de navigation à droite -->
+                <ul>
+                    <li><a href="accueil-fr.html">Accueil</a></li>
+                    <li><a href="service-fr.html">Services</a></li>
+                    <li><a href="a-propos-fr.html">À Propos</a></li>
+                    <li><a href="contact-fr.html">Contact</a></li>
+                </ul>
+        </nav>           
+    </header>
+    <main>
+        <div class="formu">
+            <h1>Demande de devis</h1>
+            <div class="detail">
+                <h3>Développement d'automatisation</h3>
+                <p>Création de scripts d'automatisation pour simplifier les tâches répétitives.
+                    <br>Développement de chatbots pour le service client en ligne.</p>
+            </div>
+            <form action="traitement.php" method="post">
+                <h2>Objectif de l'Automatisation :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Automatisation des processus commerciaux
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Automatisation des tâches récurrentes
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Intégration de systèmes et de données
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Amélioration de l'efficacité opérationnelle
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Réduction des coûts
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                <h2>Domaine d'Automatisation :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Gestion de la relation client (CRM)
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Gestion des ressources humaines
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Gestion financière
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Gestion de la chaîne d'approvisionnement
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Automatisation du marketing
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                <h2>Technologies Utilisées :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Langages de programmation (par exemple, Python, JavaScript)
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Outils d'automatisation (par exemple, Zapier, Integromat)
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Intégration de logiciels tiers
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Développement d'API personnalisées
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                <h2>Fonctionnalités Requises :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Flux de travail automatisés spécifiques
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Intégration avec des applications tierces
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Notifications automatisées
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Collecte et traitement de données automatisés
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                <h2>Services Complémentaires :</h2>
+                <ul class="options-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Formation à l'utilisation du système automatisé
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Maintenance continue
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="">Support technique
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="options[]" value="autre">Autre (spécifiez)
+                        </label>
+                        <div id="autre">
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                    </li>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </ul>
+                <h2>Je demande pour :</h2>
+                <label>
+                    <input type="radio" name="demande_pour" value="moi" id="demande_moi" required> Moi
+                </label>
+                <label>
+                    <input type="radio" name="demande_pour" value="entreprise" id="demande_entreprise" required> Mon entreprise
+                </label>
+    
+                <div id="infos_personnelles">
+                    <h2>Informations personnelles :</h2>
+                    <label for="nom">Votre nom complet :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+    
+                <div id="infos_entreprise">
+                    <h2>Informations sur l'entreprise :</h2>
+                    <label for="nom_legal">Nom légal de l'entreprise :</label>
+                    <input type="text" id="nom_legal" name="nom_legal" required>
+                    <label for="nom_demandeur">Nom du demandeur</label>
+                    <input type="text" id="nom_demandeur" name="nom_demandeur" required>
+                    <label for="role">Rôle dans l'entreprise</label>
+                    <input type="text" id="role_demandeur" name="role_demandeur" required>
+                </div>
+                <label for="number_phone">Numéro de téléphone:</label>
+                <input type="text" id="nom" name="nom" required>
+    
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required>
+    
+                <label for="message">Veuillez nous parlez un peu plus de votre projet :</label>
+                <textarea class="projet" id="message" name="message" rows="4" required></textarea>
+                <h2>Termes et Conditions d'envoie de demande</h2>
+                <label>
+                    <input type="checkbox" name="accept_terms" required>
+                    J'accepte les <a href="tced-fr.html" target="_blank">Termes et Conditions d'envoie de demande</a>
+                </label>
+    
+                <button type="submit" class="but">Envoyer</button>
+            </form>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()" title="Revenir en haut de la page">&#9650;</button>    
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Nous Contacter</h3>
+            <p><i class="fas fa-envelope"></i> jeanbaptisteetcompany.ca@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +1 (581) 578-4630</p>
+          </div>
+          <div  class="footer-center">
+            <h3>Liens Utiles</h3>
+            <ul>
+              <li><a href="accueil-fr.html">Accueil</a></li>
+              <li><a href="service-fr.html">Services</a></li>
+              <li><a href="contact-fr.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jean Baptiste & Company.Ca. Tous droits réservés.</p>
+          <ul>
+            <li><a href="MentionsL-FR.html">Mentions Légales</a></li>
+            <li><a href="politiquec-FR.html">Politique de Confidentialité</a></li>
+            <li><a href="plans-fr.html">Plan du Site</a></li>
+          </ul>
+        </div>
+      </footer-->         
+    <script src="devis-fr.js"></script>
+</body>
+</html>

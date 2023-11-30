@@ -1,0 +1,162 @@
+body {
+    background-color: white;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* Autres styles */
+  }
+/* Styles pour le header */
+header {
+    display: flex;
+    justify-content: space-between; /* Place les éléments à chaque extrémité */
+    align-items: center; /* Centre verticalement les éléments */
+    color: white;
+    background-color: black;
+    position: absolute;
+    width: 98.9%;
+  }
+  
+  /* Styles pour le logo */
+  .logo button {
+    max-width: 150px; /* Ajustez la largeur du logo selon vos besoins */
+    margin-left: 30px;
+    background: transparent;
+    justify-content: center;
+    text-align: center;
+    color: orange;
+  }
+  .header-title {
+    text-align: center; /* Centre le texte horizontalement */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    size: 12px;
+    margin-right: 28%;
+  }  
+  /* Style de la section À Propos */
+  main {
+    background: url(histoire.png);
+    background-size: 120%;
+    width: 100%;
+    height: auto;
+  }
+#about {
+    background-color: #f5f5f5; /* Couleur d'arrière-plan */
+    padding: 80px; /* Espace intérieur */
+    text-align: center; /* Centrer le contenu */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.ent {
+    color: orange;
+    background-color: black;
+    padding: 3px 3px;
+    border-radius: 5px;
+}
+.container {
+    max-width: 800px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+.container h2 {
+    font-size: 28px; /* Taille de la police du titre */
+    color: #333; /* Couleur du texte du titre */
+    margin-bottom: 20px; /* Marge inférieure */
+}
+
+.container p {
+    font-size: 16px; /* Taille de la police des paragraphes */
+    color: #666; /* Couleur du texte des paragraphes */
+    margin-bottom: 15px; /* Marge inférieure */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+.container a {
+    display: inline-block; /* Afficher comme bloc pour les liens */
+    padding: 10px 20px; /* Remplissage intérieur du lien */
+    background-color: orange; /* Couleur de fond du lien (bleu) */
+    color: #fff; /* Couleur du texte du lien (blanc) */
+    text-decoration: none; /* Pas de soulignement sur le lien */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition de couleur de fond */
+}
+
+.container a:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 0; /* Espacement interne */
+  }
+  
+  /* Style du container du footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Style des éléments du footer (gauche, centre, droite) */
+  .footer-left, .footer-center {
+    flex: 1;
+    margin: 10px;
+  }
+  .footer-left, .footer-center h3 {
+    color: orange;
+    font-family: 'Palanquin Dark', sans-serif;
+  }
+  .footer-left p {
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+  }
+  .footer-left p:hover {
+    color: #007bff;
+  }
+  
+  /* Style des liens de navigation dans le footer */
+  .footer-center ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-center ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-center a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Laila', sans-serif;
+  }
+  
+  .footer-center a:hover {
+    color: #ff9900; /* Couleur au survol */
+  }
+  /* Style du bas du footer (copyright et liens légaux) */
+  .footer-bottom {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+    font-family: 'Laila', sans-serif;
+  }
+  
+  .footer-bottom p, .footer-bottom ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-bottom a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+    color: white;
+  }

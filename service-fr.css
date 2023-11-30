@@ -1,0 +1,389 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* Autres styles */
+  }
+/* Styles pour le header */
+header {
+    display: flex;
+    justify-content: space-between; /* Place les éléments à chaque extrémité */
+    align-items: center; /* Centre verticalement les éléments */
+    color: white;
+  }
+  span {
+    color: rgb(0, 255, 0); /* Couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+  }
+  /* Styles pour le logo */
+  .logo img {
+    max-width: 150px; /* Ajustez la largeur du logo selon vos besoins */
+    margin-left: 30px;
+  }
+  
+  /* Styles pour la barre de navigation */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 30px;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 30px; /* Marge entre les éléments de la barre de navigation */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Supprime la marge du dernier élément */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Laila', sans-serif;
+  }
+  nav a:hover {
+    color: orange;
+  }
+  
+  /* Le reste de vos styles pour le contenu de la page */
+  
+  .header-title {
+    text-align: center; /* Centre le texte horizontalement */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    size: 12px;
+  }  
+  /* Styles de base */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main{
+    background: url(zzzzzz.png);
+    background-size: 300lvh;
+}
+.centered-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Hauteur de la vue */
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.centered-dore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220vh; /* Hauteur de la vue */
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.servi {
+    margin: 0 10px; /* Marge entre les éléments */
+    padding: 10px 20px; /* Espacement interne des éléments */
+    border: 1px solid #333; /* Bordure pour chaque élément (facultatif) */
+    border-radius: 5px; /* Coins arrondis (facultatif) */
+    background-color: rgb(149, 142, 142); /* Couleur d'arrière-plan (facultatif) */
+    width: 30lvh;
+}
+.servi-1, .servi-2, .servi-3  {
+    margin: 50px 10px; /* Marge entre les éléments */
+    padding: 10px 20px; /* Espacement interne des éléments */
+    border: 1px solid #333; /* Bordure pour chaque élément (facultatif) */
+    border-radius: 5px; /* Coins arrondis (facultatif) */
+    width: 55lvh;
+}
+.noss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noss h2 {
+    color: orange;
+    text-align: center;
+}
+/* Styles supplémentaires selon vos préférences */
+.travo {
+    color:rgb(64, 127, 253); /* Couleur des liens */
+    margin-right: 5lvh;
+    margin-top: 20px;
+    background-color: transparent;
+  }
+  .travo:hover{
+    color: orange;
+  }
+h3 {
+    color: orange; /* Couleur des liens */   
+  }
+  p {
+    color: black; /* Couleur des liens */
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .mama {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    padding:5px 5px;
+    margin: 50px 0;
+    background-color: blue;
+    border-radius: 10px;
+  }
+  .mama:hover {
+    color: orange;
+    opacity: 0.7;
+  }
+/* Style du footer */
+footer {
+ background-color: #333; /* Couleur de fond du footer */
+ color: #fff; /* Couleur du texte */
+ padding: 20px 0; /* Espacement interne */
+}
+
+/* Style du container du footer */
+.footer-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+/* Style des éléments du footer (gauche, centre, droite) */
+.footer-left, .footer-center {
+ flex: 1;
+ margin: 10px;
+}
+.footer-left, .footer-center h3 {
+ color: orange;
+ font-family: 'Palanquin Dark', sans-serif;
+}
+.footer-left p {
+ font-family: 'Inter Tight', sans-serif;
+ color: white;
+}
+.footer-left p:hover {
+ color: #007bff;
+}
+
+/* Style des liens de navigation dans le footer */
+.footer-center ul {
+ list-style: none;
+ padding: 0;
+}
+
+.footer-center ul li {
+ margin-bottom: 5px;
+}
+
+.footer-center a {
+ color: #fff;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ font-family: 'Inter Tight', sans-serif;
+}
+
+.footer-center a:hover {
+ color: #ff9900; /* Couleur au survol */
+}
+/* Style du bas du footer (copyright et liens légaux) */
+.footer-bottom {
+ text-align: center;
+ background-color: #222;
+ padding: 10px 0;
+ font-family: 'Laila', sans-serif;
+}
+
+.footer-bottom p, .footer-bottom ul {
+ margin: 0;
+ padding: 0;
+}
+
+.footer-bottom a {
+ color: #ff9900;
+ text-decoration: none;
+ margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+ text-decoration: underline;
+ color: white;
+}
+/* Style du bouton "Retour en haut de page" */
+#scrollToTopBtn {
+ display: none; /* Le bouton est initialement masqué */
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ z-index: 99;
+ color: orange;
+ border: none;
+ padding: 0 10px;
+ cursor: pointer;
+ font-size: 30px;
+ opacity: 0.7;
+ border-radius: 50%;
+} 
+    .fixed-list {
+      position: fixed; /* Rend la liste fixe */
+      left: 20px; /* Ajustez la position à gauche selon vos besoins */
+      top: 50%; /* Position verticale centrée */
+      transform: translateY(-50%); /* Centre verticalement la liste */
+      background-color: white; /* Ajoutez un arrière-plan si nécessaire */
+      padding: 2px 10px; /* Ajoutez un espacement intérieur si nécessaire */
+      border-radius: 40%;
+      flex-direction: column;
+    }
+    
+    .fixed-list ul {
+      list-style: none;
+      padding: 0;
+      display: block;
+    }
+    
+    .fixed-list li {
+      margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+    }
+    .what {
+      color: rgb(1, 192, 1);
+    }
+    .face {
+      color: rgb(51, 51, 246);
+    }
+    .inst {
+      color: rgb(205, 46, 10);
+    }
+    .twit {
+      color: rgb(72, 126, 242);
+    }
+    .tikt {
+      color: black;
+    }
+    .link {
+      color: rgb(72, 126, 242);
+    }
+    .yout {
+      color: red;
+    }
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style de la fenêtre de clavardage (masquée par défaut) */
+  .chat-window {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style de l'en-tête de la fenêtre de clavardage */
+  .chat-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+  }
+  
+  /* Style du bouton de fermeture de la fenêtre de clavardage */
+  #close-chat {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+  }
+  
+  /* Style de la zone d'affichage des messages */
+  .chat-messages {
+      max-height: 200px;
+      overflow-y: scroll;
+      padding: 10px;
+  }
+  
+  /* Style de la zone de saisie de texte */
+  .chat-input {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  #user-input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+  }
+  
+  #send-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+  }
+  
+  /* Style des messages de l'utilisateur */
+  .user-message {
+      background-color: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: 70%;
+      align-self: flex-end;
+  }
+  
+  /* Style des messages du chatbot */
+  .bot-message {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: 70%;
+  }
+  
+  /* Style des messages de l'utilisateur sélectionnés */
+  .user-message.selected {
+      background-color: #0056b3;
+  }
+  
+  /* Style des réponses prédéfinies */
+  .bot-message p {
+      margin: 5px;
+      cursor: pointer;
+  }
